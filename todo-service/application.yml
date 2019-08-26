@@ -1,3 +1,5 @@
+server:
+  port: 8005
 swagger:
   service-name: "任务服务"
   service-desc: "管理任务"
