@@ -26,3 +26,16 @@ spring:
           destination: defaultExchange # 表示要使用的Exchange名称定义
           content-type: application/json # 设置消息类型，本次为对象json，如果是文本则设置“text/plain”
           binder: defaultRabbit # 设置要绑定的消息服务的具体设置
+eureka:
+  port: 8761
+  username: discovery
+  password: 3GfhPZQifTpVcu
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+#      defaultZone: http://${eureka.username}:${eureka.password}@eureka1:${eureka.port}/eureka,http://${eureka.username}:${eureka.password}@eureka2:${eureka.port}/eureka
+      defaultZone: http://${eureka.username}:${eureka.password}@127.0.0.1:${eureka.port}/eureka
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
