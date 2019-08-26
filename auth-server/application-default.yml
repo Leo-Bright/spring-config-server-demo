@@ -19,7 +19,7 @@ eureka:
     registry-fetch-interval-seconds: 5
     service-url:
 #      defaultZone: http://${eureka.username}:${eureka.password}@eureka1:${eureka.port}/eureka,http://${eureka.username}:${eureka.password}@eureka2:${eureka.port}/eureka
-      defaultZone: http://${eureka.username}:${eureka.password}@localhost:${eureka.port}/eureka
+      defaultZone: http://${eureka.username}:${eureka.password}@127.0.0.1:${eureka.port}/eureka
   instance:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
