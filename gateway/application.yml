@@ -53,13 +53,7 @@ spring:
           uri: http://127.0.0.1:8003
           predicates:
             - Path=/rate-limit/**
-          filters:
-            - StripPrefix=1
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 1
-                redis-rate-limiter.burstCapacity: 5
-                key-resolver: "#{@apiKeyResolver}"
+          
 eureka:
   port: 8761
   username: discovery
