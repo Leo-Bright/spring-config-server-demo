@@ -26,31 +26,31 @@ spring:
           filters:
             - StripPrefix=1
         - id: todo-service
-          uri: lb://TODO-SERVICE
+          uri: http://127.0.0.1:8005
           predicates:
             - Path=/todo-service/**
           filters:
             - StripPrefix=1
         - id: user-service
-          uri: lb://USER-SERVICE
+          uri: http://127.0.0.1:8004
           predicates:
             - Path=/user-service/**
           filters:
             - StripPrefix=1
         - id: project-service
-          uri: lb://PROJECT-SERVICE
+          uri: http://127.0.0.1:8003
           predicates:
             - Path=/project-service/**
           filters:
             - StripPrefix=1
         - id: message-service
-          uri: lb:ws://MESSAGE-SERVICE
+          uri: ws://127.0.0.1:8002
           predicates:
             - Path=/message-service/**
           filters:
             - StripPrefix=1
         - id: dummy-service
-          uri: lb://PROJECT-SERVICE
+          uri: http://127.0.0.1:8003
           predicates:
             - Path=/rate-limit/**
           filters:
